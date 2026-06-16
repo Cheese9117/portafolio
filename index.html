@@ -603,10 +603,164 @@
     }
     .pcard:hover .pcard__mock-overlay { opacity:1; }
 
-    .mock-badel   { background: radial-gradient(circle at 35% 35%, #163323, #060e09); }
-    .mock-lumiere { background: radial-gradient(circle at 65% 30%, #1e1028, #07060c); }
-    .mock-papri   { background: radial-gradient(circle at 30% 65%, #281608, #0c0905); }
-    .mock-studio  { background: radial-gradient(circle at 70% 65%, #0b2a22, #060c0a); }
+    /* ─── CSS Website Mockups ─── */
+    .pmock { position:absolute; inset:0; overflow:hidden; pointer-events:none; user-select:none; font-size:0; }
+    .pmock-nav {
+      position:absolute; top:0; left:0; right:0; height:13%;
+      display:flex; align-items:center; padding:0 5%;
+      background:rgba(0,0,0,.35); backdrop-filter:blur(6px);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .pmock-logo { font-family:var(--font-display); font-weight:800; font-size:5.5px; letter-spacing:.14em; color:#fff; white-space:nowrap; text-transform:uppercase; }
+    .pmock-navlinks { display:flex; gap:8px; margin-left:auto; align-items:center; }
+    .pmock-navlinks i { display:block; height:1.5px; width:13px; border-radius:1px; background:rgba(255,255,255,.3); }
+    .pmock-pill { font-size:4px; padding:1.5px 4px; border-radius:2px; border:1px solid rgba(255,255,255,.22); color:rgba(255,255,255,.55); font-family:var(--font-sans); font-weight:600; letter-spacing:.06em; }
+    .pb { display:block; border-radius:2px; }
+    .pb + .pb { margin-top:3px; }
+    .pb-gap { display:block; height:6px; }
+
+    /* ── Luis Badel ── */
+    .mock-badel { background:linear-gradient(145deg,#061710 0%,#0c2a1e 60%,#071910 100%); }
+    .pmock-badel-split {
+      position:absolute; inset:13% 0 0 0;
+      display:grid; grid-template-columns:1.05fr 1fr;
+    }
+    .pmock-badel-l { display:flex; flex-direction:column; justify-content:center; padding:5% 4% 32% 6%; gap:0; }
+    .pmock-badel-tag { height:2px; width:24%; background:#25d366; border-radius:1px; margin-bottom:7px; }
+    .pmock-badel-l .pb.h { height:7px; background:#fff; width:80%; }
+    .pmock-badel-l .pb.h2 { height:5px; background:rgba(255,255,255,.5); width:60%; }
+    .pmock-badel-l .pb.sm { height:2.5px; background:rgba(255,255,255,.22); width:75%; }
+    .pmock-badel-l .pb.sm2 { height:2.5px; background:rgba(255,255,255,.22); width:60%; }
+    .pmock-badel-cta { width:38%; height:8px; background:#25d366; border-radius:4px; margin-top:9px; }
+    .pmock-badel-r {
+      position:relative; overflow:hidden;
+      background:linear-gradient(155deg,#1a4830 0%,#0a2118 100%);
+    }
+    .pmock-badel-r::before {
+      content:''; position:absolute; bottom:32%; left:50%; transform:translateX(-50%);
+      width:40%; height:64%;
+      background:linear-gradient(180deg,#2e6e4a 0%,#163827 100%);
+      border-radius:50% 50% 0 0 / 52% 52% 0 0;
+    }
+    .pmock-badel-r::after {
+      content:''; position:absolute; inset:0;
+      background:linear-gradient(180deg,transparent 50%,rgba(6,23,16,.75) 100%);
+    }
+    .pmock-badel-gallery {
+      position:absolute; bottom:0; left:0; right:0; height:30%;
+      display:grid; grid-template-columns:repeat(4,1fr); gap:2px; background:#020905;
+    }
+    .pmock-badel-gallery span { display:block; }
+    .pmock-badel-gallery span:nth-child(1) { background:linear-gradient(135deg,#1d5436,#0c2218); }
+    .pmock-badel-gallery span:nth-child(2) { background:linear-gradient(135deg,#153f28,#091a12); }
+    .pmock-badel-gallery span:nth-child(3) { background:linear-gradient(160deg,#113322,#061610); }
+    .pmock-badel-gallery span:nth-child(4) { background:linear-gradient(135deg,#1b4d31,#0a2017); }
+
+    /* ── Lumière ── */
+    .mock-lumiere { background:linear-gradient(145deg,#07040e 0%,#120a20 60%,#090619 100%); }
+    .pmock-lumiere-body {
+      position:absolute; inset:13% 0 0 0;
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      padding:4% 10%;
+    }
+    .pmock-lumiere-eyebrow { height:1.5px; width:18%; background:#a855f7; border-radius:1px; margin-bottom:7px; }
+    .pmock-lumiere-body .pb.h { height:7px; background:#fff; width:70%; align-self:center; }
+    .pmock-lumiere-body .pb.h2 { height:4.5px; background:rgba(255,255,255,.45); width:50%; align-self:center; }
+    .pmock-lumiere-widget {
+      width:58%; padding:7px 8px;
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(168,85,247,.25);
+      border-radius:4px; margin-top:11px;
+      display:flex; flex-direction:column; gap:5px;
+    }
+    .pmock-lumiere-widget-label { height:2px; width:35%; background:rgba(168,85,247,.6); border-radius:1px; }
+    .pmock-lumiere-widget-row { display:flex; gap:3px; }
+    .pmock-lumiere-widget-btn {
+      flex:1; height:7px; border-radius:2px;
+      background:rgba(255,255,255,.06); border:1px solid rgba(168,85,247,.15);
+    }
+    .pmock-lumiere-widget-btn.sel { background:rgba(168,85,247,.25); border-color:rgba(168,85,247,.5); }
+    .pmock-lumiere-cta { width:30%; height:7px; background:#a855f7; border-radius:4px; margin-top:4px; align-self:center; }
+    .pmock-lumiere-strip {
+      position:absolute; bottom:0; left:0; right:0; height:22%;
+      display:grid; grid-template-columns:1fr 1fr; gap:2px; background:#050310;
+    }
+    .pmock-lumiere-strip span:nth-child(1) { background:linear-gradient(135deg,#1a0f2e,#0d0820); }
+    .pmock-lumiere-strip span:nth-child(2) { background:linear-gradient(135deg,#150c26,#090618); display:block; position:relative; }
+    .pmock-lumiere-strip span:nth-child(2)::after {
+      content:''; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+      width:30%; height:3px; background:rgba(168,85,247,.3); border-radius:1px;
+    }
+
+    /* ── Paprimos ── */
+    .mock-papri { background:linear-gradient(145deg,#0e0500 0%,#1c0b02 55%,#0c0400 100%); }
+    .pmock-papri-hero {
+      position:absolute; inset:13% 0 33% 0;
+      display:flex; align-items:center; padding:0 5% 0 6%;
+    }
+    .pmock-papri-text { flex:1.1; display:flex; flex-direction:column; gap:0; }
+    .pmock-papri-text .pb.h { height:7px; background:#fff; width:75%; }
+    .pmock-papri-text .pb.h2 { height:4.5px; background:rgba(255,255,255,.45); width:55%; }
+    .pmock-papri-text .pb.sm { height:2.5px; background:rgba(255,255,255,.22); width:80%; }
+    .pmock-papri-text .pb.sm2 { height:2.5px; background:rgba(255,255,255,.22); width:62%; }
+    .pmock-papri-locs { display:flex; gap:4px; margin-top:8px; }
+    .pmock-papri-loc {
+      height:5px; padding:0 4px; background:rgba(230,92,0,.15);
+      border:1px solid rgba(230,92,0,.35); border-radius:3px;
+      display:flex; align-items:center; gap:2px;
+    }
+    .pmock-papri-loc::before { content:''; display:block; width:2px; height:2px; background:#e65c00; border-radius:50%; }
+    .pmock-papri-loc span { height:1.5px; width:14px; background:rgba(230,92,0,.5); border-radius:1px; display:block; }
+    .pmock-papri-cta { width:30%; height:8px; background:#e65c00; border-radius:4px; margin-top:8px; }
+    .pmock-papri-food {
+      flex:.9; aspect-ratio:1; max-height:78%;
+      background:radial-gradient(circle at 50% 40%,#c04a00,#6e2900);
+      border-radius:50%; box-shadow:0 0 24px rgba(230,92,0,.3);
+      position:relative; overflow:hidden;
+    }
+    .pmock-papri-food::after {
+      content:''; position:absolute; inset:0;
+      background:radial-gradient(ellipse at 30% 25%,rgba(255,120,0,.35),transparent 60%);
+    }
+    .pmock-papri-menu {
+      position:absolute; bottom:0; left:0; right:0; height:31%;
+      display:grid; grid-template-columns:repeat(4,1fr); gap:3px;
+      padding:3px 4%; background:rgba(0,0,0,.4);
+    }
+    .pmock-papri-card {
+      background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.06);
+      border-radius:3px; display:flex; flex-direction:column;
+      align-items:center; justify-content:center; gap:3px; padding:3px 2px;
+    }
+    .pmock-papri-card-i { width:65%; aspect-ratio:1; background:linear-gradient(135deg,#c04a00,#7a2d00); border-radius:2px; }
+    .pmock-papri-card-t { height:1.5px; width:60%; background:rgba(255,255,255,.3); border-radius:1px; }
+
+    /* ── Studio ── */
+    .mock-studio { background:linear-gradient(145deg,#030b06 0%,#071509 55%,#040d07 100%); }
+    .pmock-studio-split {
+      position:absolute; inset:13% 0 0 0;
+      display:grid; grid-template-columns:1fr 1.15fr;
+    }
+    .pmock-studio-l {
+      display:flex; flex-direction:column; justify-content:center;
+      padding:5% 4% 5% 6%; border-right:1px solid rgba(255,255,255,.05);
+    }
+    .pmock-studio-line { height:1px; width:22%; background:#c9a84c; margin-bottom:10px; }
+    .pmock-studio-l .pb.h { height:7px; background:#fff; width:78%; }
+    .pmock-studio-l .pb.h2 { height:4.5px; background:rgba(255,255,255,.42); width:58%; }
+    .pmock-studio-l .pb.sm { height:2.5px; background:rgba(255,255,255,.2); width:80%; }
+    .pmock-studio-l .pb.sm2 { height:2.5px; background:rgba(255,255,255,.2); width:64%; }
+    .pmock-studio-cta { width:34%; height:7px; background:rgba(201,168,76,.75); border-radius:3px; margin-top:10px; }
+    .pmock-studio-r {
+      display:grid; grid-template-rows:1fr 1fr; gap:2px; padding:3%; overflow:hidden;
+    }
+    .pmock-studio-img1 { background:linear-gradient(135deg,#1d5438,#0a2418); border-radius:3px; }
+    .pmock-studio-img2 {
+      display:grid; grid-template-columns:1fr 1fr; gap:2px;
+    }
+    .pmock-studio-img2 span { display:block; border-radius:2px; }
+    .pmock-studio-img2 span:nth-child(1) { background:linear-gradient(135deg,#153d27,#071810); }
+    .pmock-studio-img2 span:nth-child(2) { background:rgba(201,168,76,.1); border:1px solid rgba(201,168,76,.2); }
 
     .pcard__body { padding:clamp(1.25rem,2.5vw,1.75rem); display:flex; flex-direction:column; flex-grow:1; }
     .pcard__tags { display:flex; gap:.4rem; margin-bottom:.75rem; }
@@ -1033,7 +1187,31 @@
                 <span class="pcard__url">cheese9117.github.io/luis-badel</span>
               </div>
               <div class="pcard__mock mock-badel">
-                <span class="pcard__mock-label">Luis Badel Sala de Belleza</span>
+                <figure class="pmock" aria-hidden="true">
+                  <div class="pmock-nav">
+                    <span class="pmock-logo">Luis Badel</span>
+                    <div class="pmock-navlinks">
+                      <i></i><i></i><i></i>
+                      <span class="pmock-pill">ES</span>
+                      <span class="pmock-pill">EN</span>
+                    </div>
+                  </div>
+                  <div class="pmock-badel-split">
+                    <div class="pmock-badel-l">
+                      <div class="pmock-badel-tag"></div>
+                      <span class="pb h"></span>
+                      <span class="pb h2"></span>
+                      <span class="pb-gap"></span>
+                      <span class="pb sm"></span>
+                      <span class="pb sm2"></span>
+                      <div class="pmock-badel-cta"></div>
+                    </div>
+                    <div class="pmock-badel-r"></div>
+                  </div>
+                  <div class="pmock-badel-gallery">
+                    <span></span><span></span><span></span><span></span>
+                  </div>
+                </figure>
                 <div class="pcard__mock-overlay">
                   <a href="https://cheese9117.github.io/luis-badel/" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">Ver en vivo →</a>
                 </div>
@@ -1057,7 +1235,29 @@
                 <span class="pcard__url">cheese9117.github.io/lumiere-studio</span>
               </div>
               <div class="pcard__mock mock-lumiere">
-                <span class="pcard__mock-label">Lumière Studio</span>
+                <figure class="pmock" aria-hidden="true">
+                  <div class="pmock-nav">
+                    <span class="pmock-logo" style="letter-spacing:.06em;font-style:italic;">Lumière</span>
+                    <div class="pmock-navlinks"><i></i><i></i><i></i><i></i></div>
+                  </div>
+                  <div class="pmock-lumiere-body">
+                    <div class="pmock-lumiere-eyebrow"></div>
+                    <span class="pb h"></span>
+                    <span class="pb h2"></span>
+                    <div class="pmock-lumiere-widget">
+                      <div class="pmock-lumiere-widget-label"></div>
+                      <div class="pmock-lumiere-widget-row">
+                        <div class="pmock-lumiere-widget-btn sel"></div>
+                        <div class="pmock-lumiere-widget-btn"></div>
+                        <div class="pmock-lumiere-widget-btn"></div>
+                      </div>
+                      <div class="pmock-lumiere-cta"></div>
+                    </div>
+                  </div>
+                  <div class="pmock-lumiere-strip">
+                    <span></span><span></span>
+                  </div>
+                </figure>
                 <div class="pcard__mock-overlay">
                   <a href="https://cheese9117.github.io/lumiere-studio/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Ver en vivo →</a>
                 </div>
@@ -1081,7 +1281,34 @@
                 <span class="pcard__url">cheese9117.github.io/paprimos</span>
               </div>
               <div class="pcard__mock mock-papri">
-                <span class="pcard__mock-label">Paprimos</span>
+                <figure class="pmock" aria-hidden="true">
+                  <div class="pmock-nav">
+                    <span class="pmock-logo">Paprimos</span>
+                    <div class="pmock-navlinks"><i></i><i></i><i></i><i></i></div>
+                  </div>
+                  <div class="pmock-papri-hero">
+                    <div class="pmock-papri-text">
+                      <span class="pb h"></span>
+                      <span class="pb h2"></span>
+                      <span class="pb-gap"></span>
+                      <span class="pb sm"></span>
+                      <span class="pb sm2"></span>
+                      <div class="pmock-papri-locs">
+                        <div class="pmock-papri-loc"><span></span></div>
+                        <div class="pmock-papri-loc"><span></span></div>
+                        <div class="pmock-papri-loc"><span></span></div>
+                      </div>
+                      <div class="pmock-papri-cta"></div>
+                    </div>
+                    <div class="pmock-papri-food"></div>
+                  </div>
+                  <div class="pmock-papri-menu">
+                    <div class="pmock-papri-card"><div class="pmock-papri-card-i"></div><div class="pmock-papri-card-t"></div></div>
+                    <div class="pmock-papri-card"><div class="pmock-papri-card-i"></div><div class="pmock-papri-card-t"></div></div>
+                    <div class="pmock-papri-card"><div class="pmock-papri-card-i"></div><div class="pmock-papri-card-t"></div></div>
+                    <div class="pmock-papri-card"><div class="pmock-papri-card-i"></div><div class="pmock-papri-card-t"></div></div>
+                  </div>
+                </figure>
                 <div class="pcard__mock-overlay">
                   <a href="https://cheese9117.github.io/paprimos/index.html" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Ver en vivo →</a>
                 </div>
@@ -1105,7 +1332,29 @@
                 <span class="pcard__url">cheese9117.github.io/luis-badel-studio</span>
               </div>
               <div class="pcard__mock mock-studio">
-                <span class="pcard__mock-label">Luis Badel Studio</span>
+                <figure class="pmock" aria-hidden="true">
+                  <div class="pmock-nav">
+                    <span class="pmock-logo" style="letter-spacing:.1em;">LB STUDIO</span>
+                    <div class="pmock-navlinks"><i></i><i></i><i></i></div>
+                  </div>
+                  <div class="pmock-studio-split">
+                    <div class="pmock-studio-l">
+                      <div class="pmock-studio-line"></div>
+                      <span class="pb h"></span>
+                      <span class="pb h2"></span>
+                      <span class="pb-gap"></span>
+                      <span class="pb sm"></span>
+                      <span class="pb sm2"></span>
+                      <div class="pmock-studio-cta"></div>
+                    </div>
+                    <div class="pmock-studio-r">
+                      <div class="pmock-studio-img1"></div>
+                      <div class="pmock-studio-img2">
+                        <span></span><span></span>
+                      </div>
+                    </div>
+                  </div>
+                </figure>
                 <div class="pcard__mock-overlay">
                   <a href="https://cheese9117.github.io/luis-badel-studio/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Ver en vivo →</a>
                 </div>
@@ -1115,7 +1364,7 @@
               <div>
                 <div class="pcard__tags"><span class="ptag">Portafolio</span></div>
                 <h3>Luis Badel Studio</h3>
-                <p>Variante de identidad visual para el mismo cliente. Prueba de adaptación de diseño sin perder coherencia de marca.</p>
+                <p>Rediseño premium del mismo salón con enfoque editorial y paleta reducida. Demuestra cómo una marca puede comunicar exclusividad sin cambiar su identidad.</p>
                 <div class="pcard__stack"><span>HTML</span><span>CSS</span><span>JS</span></div>
               </div>
               <a href="https://cheese9117.github.io/luis-badel-studio/" class="btn btn-outline pcard__link" target="_blank" rel="noopener noreferrer">Ver proyecto →</a>
