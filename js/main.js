@@ -235,10 +235,10 @@
   if (!el) return;
 
   const phrases = [
-    'Landing Pages de alto impacto',
-    'Chatbots de WhatsApp con IA',
-    'Automatizaciones con n8n',
-    'Claude API + Twilio',
+    'Páginas web que convierten visitas en clientes.',
+    'Chatbots que atienden 24/7 sin que levantes el teléfono.',
+    'Automatizaciones que te devuelven horas de trabajo.',
+    'Sistemas digitales para negocios de Medellín.',
   ];
   let pi = 0, ci = 0, del = false;
 
