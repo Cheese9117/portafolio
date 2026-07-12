@@ -19,3 +19,6 @@ Thumbs.db
 # Logs
 *.log
 npm-debug.log*
+
+# Material de referencia de marca (mockups en bruto, no se publican)
+/Brand/

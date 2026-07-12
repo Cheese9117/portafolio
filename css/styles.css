@@ -2,7 +2,7 @@
    Design Tokens
 ═══════════════════════════ */
 :root {
-  --bg:            #060606;
+  --bg:            #090909;
   --surface:       #0f0f0f;
   --surface-hi:    #171717;
   --border:        rgba(255,255,255,.06);
@@ -11,11 +11,14 @@
   --text:          #ebebeb;
   --muted:         #888;
   --faint:         #444;
-  --accent:        #00d4a1;
-  --accent-glow:   rgba(0,212,161,.4);
-  --accent-soft:   rgba(0,212,161,.08);
-  --accent-dim:    rgba(0,212,161,.18);
-  --accent-dark:   #009e78;
+  /* Marca RENAS — verde principal + gradiente oficial */
+  --accent:        #17D79A;
+  --accent-light:  #39E6B0;
+  --accent-dark:   #0FA978;
+  --accent-glow:   rgba(23,215,154,.4);
+  --accent-soft:   rgba(23,215,154,.08);
+  --accent-dim:    rgba(23,215,154,.18);
+  --accent-gradient: linear-gradient(90deg, var(--accent-dark), var(--accent-light));
   --green:         #25d366;
   --font-sans:     'Inter', sans-serif;
   --font-display:  'Sora', sans-serif;
@@ -149,10 +152,15 @@ section { padding: clamp(5rem,10vw,8rem) 0; }
 }
 .nav__inner { display:flex; align-items:center; justify-content:space-between; width:100%; }
 .nav__logo {
-  font-family: var(--font-display); font-size:1rem; font-weight:800;
-  letter-spacing:-.02em;
+  display:flex; align-items:center; gap:.5rem;
+  transition: opacity .25s var(--ease-out);
 }
-.nav__logo-dot { color: var(--accent); }
+.nav__logo:hover { opacity:.82; }
+.nav__logo-mark { display:block; width:34px; height:auto; flex-shrink:0; }
+.nav__logo-word {
+  font-family: var(--font-display); font-size:1.05rem; font-weight:800;
+  letter-spacing:.02em; color: var(--text);
+}
 .nav__hamburger {
   display:flex; flex-direction:column; gap:5px; padding:.5rem; z-index:160;
 }
@@ -932,8 +940,9 @@ section { padding: clamp(5rem,10vw,8rem) 0; }
 .footer { border-top:1px solid var(--border); padding:clamp(3rem,7vw,5rem) 0 1.75rem; }
 .footer__g { display:grid; gap:2.5rem; margin-bottom:3rem; }
 @media(min-width:720px){ .footer__g { grid-template-columns:2fr 1fr 1fr; } }
-.footer__brand { font-family: var(--font-display); font-size:1.1rem; font-weight:800; margin-bottom:.6rem; }
-.footer__brand span { color: var(--accent); }
+.footer__brand { display:flex; align-items:center; gap:.5rem; font-family: var(--font-display); font-size:1.1rem; font-weight:800; margin-bottom:.6rem; }
+.footer__brand-mark { display:block; width:30px; height:auto; flex-shrink:0; }
+.footer__brand span { color: var(--text); }
 .footer p { color: var(--muted); font-size:.88rem; max-width:290px; line-height:1.75; }
 .footer h4 { font-family: var(--font-mono); font-size:.68rem; letter-spacing:.12em; text-transform:uppercase; color: var(--faint); margin-bottom:1rem; }
 .footer__links { display:flex; flex-direction:column; gap:.7rem; }

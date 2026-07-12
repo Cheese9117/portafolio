@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100" role="img" aria-label="Isotipo RENAS">
+  <defs>
+    <linearGradient id="renasGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0FA978"/>
+      <stop offset="100%" stop-color="#39E6B0"/>
+    </linearGradient>
+  </defs>
+  <path d="M14,74 C40,74 48,18 76,18 C92,18 108,18 124,18 C152,18 160,74 186,74"
+        fill="none" stroke="url(#renasGradient)" stroke-width="15"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="RENAS">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0FA978"/>
+      <stop offset="100%" stop-color="#39E6B0"/>
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="7" fill="#090909"/>
+  <path d="M5,21 C9,21 10,9 16,9 C22,9 23,21 27,21"
+        fill="none" stroke="url(#g)" stroke-width="3.4"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

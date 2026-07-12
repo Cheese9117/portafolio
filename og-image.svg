@@ -2,16 +2,25 @@
   <defs>
     <radialGradient id="glow" cx="75%" cy="25%" r="60%">
       <stop offset="0%" stop-color="#0a3b30"/>
-      <stop offset="100%" stop-color="#0a0a0a"/>
+      <stop offset="100%" stop-color="#090909"/>
     </radialGradient>
+    <linearGradient id="brandGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0FA978"/>
+      <stop offset="100%" stop-color="#39E6B0"/>
+    </linearGradient>
   </defs>
-  <rect width="1200" height="630" fill="#0a0a0a"/>
+  <rect width="1200" height="630" fill="#090909"/>
   <rect width="1200" height="630" fill="url(#glow)"/>
-  <circle cx="120" cy="100" r="4" fill="#00d4a1"/>
-  <text x="120" y="106" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#00d4a1" dx="14">Desarrollador web freelance · Medellín, Colombia</text>
+
+  <!-- Isotipo RENAS -->
+  <path d="M1000,116 C1024,116 1032,60 1058,60 C1073,60 1087,60 1102,60 C1128,60 1136,116 1160,116"
+        fill="none" stroke="url(#brandGradient)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1080" y="152" font-family="Arial, sans-serif" font-size="24" font-weight="800" fill="#f5f5f5" text-anchor="middle" letter-spacing="2">RENAS</text>
+
+  <text x="120" y="106" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#17D79A">Desarrollador web freelance · Medellín, Colombia</text>
   <text x="120" y="280" font-family="Arial, sans-serif" font-size="76" font-weight="800" fill="#f5f5f5">Juan Sebastián</text>
-  <text x="120" y="370" font-family="Arial, sans-serif" font-size="76" font-weight="800" fill="#00d4a1">Henao Arenas</text>
+  <text x="120" y="370" font-family="Arial, sans-serif" font-size="76" font-weight="800" fill="#17D79A">Henao Arenas</text>
   <text x="120" y="450" font-family="Arial, sans-serif" font-size="28" fill="#9ca3af">Landing pages · Chatbots de WhatsApp con IA · Automatizaciones</text>
-  <rect x="120" y="500" width="220" height="56" rx="28" fill="#00d4a1"/>
+  <rect x="120" y="500" width="220" height="56" rx="28" fill="#17D79A"/>
   <text x="230" y="535" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#04140f" text-anchor="middle">Ver portafolio</text>
 </svg>

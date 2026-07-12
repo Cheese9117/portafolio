@@ -105,7 +105,7 @@
 
   const canvas = document.getElementById('heroCanvas');
   const ctx    = canvas.getContext('2d');
-  const R      = '0,212,161';
+  const R      = '23,215,154'; // #17D79A — verde principal RENAS
   const DIST   = 145;
   const N_NODES = 65;
 
