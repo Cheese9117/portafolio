@@ -1,17 +1,27 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-CO">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Juan Sebastián Henao Arenas · Desarrollador Web Freelance en Medellín</title>
-  <meta name="description" content="Desarrollador web freelance en Medellín. Landing pages, chatbots de WhatsApp con IA y automatizaciones que consiguen clientes para negocios locales.">
+  <title>RENAS — Sistemas que hacen crecer tu negocio | Medellín</title>
+  <meta name="description" content="RENAS diseña sitios web, chatbots con IA y automatizaciones para negocios en Medellín. Menos tareas manuales, más clientes, sistemas que funcionan solos.">
   <meta name="author" content="Juan Sebastián Henao Arenas">
   <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#090909">
+
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Juan Sebastián Henao Arenas · Desarrollador Web Freelance">
-  <meta property="og:description" content="Landing pages, chatbots de WhatsApp con IA y automatizaciones para negocios locales en Medellín.">
+  <meta property="og:title" content="RENAS — Sistemas que hacen crecer tu negocio">
+  <meta property="og:description" content="Sitios web, chatbots con IA y automatizaciones para negocios en Medellín. Sistemas que trabajan incluso cuando nadie está mirando.">
   <meta property="og:image" content="https://cheese9117.github.io/portafolio/og-image.svg">
   <meta property="og:url" content="https://cheese9117.github.io/portafolio/">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:site_name" content="RENAS">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="RENAS — Sistemas que hacen crecer tu negocio">
+  <meta name="twitter:description" content="Sitios web, chatbots con IA y automatizaciones para negocios en Medellín.">
+  <meta name="twitter:image" content="https://cheese9117.github.io/portafolio/og-image.svg">
+
   <link rel="canonical" href="https://cheese9117.github.io/portafolio/">
   <link rel="icon" type="image/svg+xml" href="assets/brand/favicon.svg">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; script-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'">
@@ -19,26 +29,52 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "RENAS",
+    "description": "Sistemas web para negocios: sitios, chatbots con IA y automatizaciones que recuperan tiempo y consiguen clientes.",
+    "url": "https://cheese9117.github.io/portafolio/",
+    "image": "https://cheese9117.github.io/portafolio/og-image.svg",
+    "founder": { "@type": "Person", "name": "Juan Sebastián Henao Arenas" },
+    "areaServed": { "@type": "City", "name": "Medellín" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Medellín", "addressCountry": "CO" },
+    "sameAs": ["https://github.com/Cheese9117"],
+    "makesOffer": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sitios web de conversión" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Chatbots con IA para WhatsApp" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Automatización de operaciones" } }
+    ]
+  }
+  </script>
 </head>
 <body>
 
   <!-- Loader -->
   <div class="loader" id="loader" aria-hidden="true">
-    <p class="loader__logo">JS<em>.</em></p>
+    <img src="assets/brand/isotype.svg" class="loader__mark" alt="" width="64" height="32">
     <div class="loader__line"><div class="loader__fill"></div></div>
-    <span class="loader__text">Cargando portafolio</span>
   </div>
 
   <!-- Progress -->
   <div class="progress" id="progress" aria-hidden="true"></div>
 
+  <!-- Quiet background system (shared across all sections) -->
+  <div class="bg-system" aria-hidden="true">
+    <div class="bg-grid"></div>
+    <div class="bg-glow"></div>
+    <div class="bg-noise"></div>
+  </div>
+
   <!-- Side nav -->
   <nav class="sidenav" id="sidenav" aria-label="Secciones">
     <ul class="sidenav__list">
       <li><button class="sidenav__btn" data-t="inicio"     aria-label="Inicio">    <span class="sidenav__tip">Inicio</span></button></li>
-      <li><button class="sidenav__btn" data-t="sobre-mi"   aria-label="Sobre mí">  <span class="sidenav__tip">Sobre mí</span></button></li>
+      <li><button class="sidenav__btn" data-t="sobre-mi"   aria-label="Por qué existimos"><span class="sidenav__tip">Por qué existimos</span></button></li>
       <li><button class="sidenav__btn" data-t="servicios"  aria-label="Servicios"> <span class="sidenav__tip">Servicios</span></button></li>
-      <li><button class="sidenav__btn" data-t="portafolio" aria-label="Portafolio"><span class="sidenav__tip">Portafolio</span></button></li>
+      <li><button class="sidenav__btn" data-t="portafolio" aria-label="Casos de estudio"><span class="sidenav__tip">Casos de estudio</span></button></li>
       <li><button class="sidenav__btn" data-t="proceso"    aria-label="Proceso">   <span class="sidenav__tip">Proceso</span></button></li>
       <li><button class="sidenav__btn" data-t="contacto"   aria-label="Contacto">  <span class="sidenav__tip">Contacto</span></button></li>
     </ul>
@@ -47,7 +83,7 @@
   <!-- Navbar -->
   <header class="nav" id="nav">
     <div class="container nav__inner">
-      <a href="#inicio" class="nav__logo" aria-label="RENAS, inicio — Juan Sebastián Henao Arenas">
+      <a href="#inicio" class="nav__logo" aria-label="RENAS, inicio">
         <img src="assets/brand/isotype.svg" class="nav__logo-mark" alt="" width="34" height="17" loading="eager">
         <span class="nav__logo-word">RENAS</span>
       </a>
@@ -56,13 +92,13 @@
       </button>
       <nav class="nav__menu" id="navmenu" aria-label="Principal">
         <a href="#inicio"     class="nav__link" data-s="inicio">Inicio</a>
-        <a href="#sobre-mi"   class="nav__link" data-s="sobre-mi">Sobre mí</a>
+        <a href="#sobre-mi"   class="nav__link" data-s="sobre-mi">Por qué existimos</a>
         <a href="#servicios"  class="nav__link" data-s="servicios">Servicios</a>
-        <a href="#portafolio" class="nav__link" data-s="portafolio">Portafolio</a>
+        <a href="#portafolio" class="nav__link" data-s="portafolio">Casos de estudio</a>
         <a href="#proceso"    class="nav__link" data-s="proceso">Proceso</a>
         <a href="#contacto"   class="nav__link" data-s="contacto">Contacto</a>
         <div class="nav__cta">
-          <a href="https://wa.me/573237226334?text=Hola%20Juan%2C%20vi%20tu%20portafolio%20de%20automatizaci%C3%B3n%20y%20desarrollo%20web%20y%20me%20gustar%C3%ADa%20cotizar%20un%20proyecto%20para%20mi%20negocio." class="btn btn-primary magnetic" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          <a href="https://wa.me/573237226334?text=Hola%20RENAS%2C%20vi%20su%20sitio%20y%20quiero%20hablar%20sobre%20un%20proyecto." class="btn btn-primary magnetic" target="_blank" rel="noopener noreferrer">Hablemos</a>
         </div>
       </nav>
     </div>
@@ -72,30 +108,25 @@
 
     <!-- ══════════ HERO ══════════ -->
     <section class="hero" id="inicio">
-      <canvas id="heroCanvas" aria-hidden="true"></canvas>
-      <div class="hero__vignette" aria-hidden="true"></div>
       <div class="container hero__content">
         <p class="hero__status">
           <span class="hero__status-dot" aria-hidden="true"></span>
-          Disponible para proyectos · Medellín, CO
+          Aceptando nuevos proyectos · Medellín, CO
         </p>
-        <p class="hero__kicker" id="heroName">Juan Sebastián Henao Arenas</p>
         <h1 class="hero__title">
-          Traduzco procesos manuales<br>
-          <span class="hero__title-accent">en sistemas que facturan.</span>
+          Tu negocio, trabajando
+          <span class="hero__title-accent">incluso cuando nadie está mirando.</span>
         </h1>
-        <p class="hero__tw">
-          <span class="hero__tw-word" id="heroTw" aria-live="polite"></span><span class="hero__tw-cur" aria-hidden="true"></span>
-        </p>
         <p class="hero__lead">
-          Desarrollador Web Freelance en Medellín. Ayudo a empresas y profesionales a digitalizar su operación: desde chatbots inteligentes con n8n hasta páginas web que convierten visitantes en clientes. Sin enredos técnicos, directo al resultado.
+          RENAS diseña sitios web, chatbots y automatizaciones para negocios en Medellín —
+          pensados para recuperar tiempo y conseguir clientes, no para llenarte de herramientas.
         </p>
         <div class="hero__ctas">
-          <a href="#portafolio" class="btn btn-primary btn-lg magnetic">Ver casos de éxito</a>
-          <a href="https://wa.me/573237226334?text=Hola%20Juan%2C%20vi%20tu%20portafolio%20de%20automatizaci%C3%B3n%20y%20desarrollo%20web%20y%20me%20gustar%C3%ADa%20cotizar%20un%20proyecto%20para%20mi%20negocio." class="btn btn-outline btn-lg magnetic" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/573237226334?text=Hola%20RENAS%2C%20vi%20su%20sitio%20y%20quiero%20hablar%20sobre%20un%20proyecto." class="btn btn-primary btn-lg magnetic" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.78 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.84 14.07c-.25.7-1.45 1.34-2 1.42-.51.08-1.16.11-1.87-.12-.43-.14-.98-.32-1.69-.62-2.97-1.28-4.91-4.27-5.06-4.47-.15-.2-1.21-1.61-1.21-3.07s.76-2.18 1.03-2.48c.27-.3.59-.37.79-.37.2 0 .4 0 .57.01.18.01.43-.07.67.51.25.6.85 2.08.92 2.23.07.15.12.33.02.53-.1.2-.16.32-.31.5-.15.18-.32.4-.46.53-.15.15-.31.31-.13.6.18.3.8 1.32 1.72 2.14 1.18 1.05 2.18 1.38 2.49 1.53.31.15.49.13.67-.05.18-.18.79-.92 1-1.23.21-.31.42-.26.7-.16.28.1 1.78.84 2.09.99.31.15.51.23.59.36.08.13.08.74-.17 1.44z"/></svg>
-            Cotizar por WhatsApp
+            Habla con nosotros
           </a>
+          <a href="#portafolio" class="btn btn-outline btn-lg magnetic">Ver casos de estudio</a>
         </div>
       </div>
       <div class="hero__scroll" aria-hidden="true">
@@ -104,68 +135,57 @@
       </div>
     </section>
 
-    <!-- ══════════ STATS ══════════ -->
-    <section class="stats" id="stats" aria-label="Estadísticas">
+    <!-- ══════════ PRINCIPLES ══════════ -->
+    <section class="principles" id="principios" aria-label="Cómo trabajamos">
       <div class="container">
-        <div class="stats__grid">
-          <div class="stat r" data-d="up">
-            <strong class="stat__n" data-target="4" data-suffix="+">0</strong>
-            <span class="stat__l">Proyectos completados</span>
+        <div class="principles__grid">
+          <div class="principle r" data-d="up">
+            <span class="principle__mark" aria-hidden="true"></span>
+            <h3>Precio cerrado</h3>
+            <p>Sabes cuánto cuesta antes de empezar. Sin letra chica ni sorpresas al final.</p>
           </div>
-          <div class="stat r" data-d="up" data-delay="100">
-            <strong class="stat__n" data-target="2" data-suffix="+">0</strong>
-            <span class="stat__l">Clientes activos</span>
+          <div class="principle r" data-d="up" data-delay="80">
+            <span class="principle__mark" aria-hidden="true"></span>
+            <h3>Semanas, no meses</h3>
+            <p>De la primera conversación al sistema en producción, sin fricción de por medio.</p>
           </div>
-          <div class="stat r" data-d="up" data-delay="200">
-            <strong class="stat__n" data-target="10" data-suffix="+">0</strong>
-            <span class="stat__l">Tecnologías dominadas</span>
+          <div class="principle r" data-d="up" data-delay="160">
+            <span class="principle__mark" aria-hidden="true"></span>
+            <h3>Contacto directo</h3>
+            <p>Hablas con quien construye el sistema, no con un ticket de soporte genérico.</p>
           </div>
-          <div class="stat r" data-d="up" data-delay="300">
-            <strong class="stat__n" data-target="2" data-suffix="+">0</strong>
-            <span class="stat__l">Años construyendo</span>
+          <div class="principle r" data-d="up" data-delay="240">
+            <span class="principle__mark" aria-hidden="true"></span>
+            <h3>Hecho para durar</h3>
+            <p>Sistemas simples de operar, para que no dependas de nadie una vez entregados.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ══════════ ABOUT ══════════ -->
+    <!-- ══════════ POR QUÉ EXISTIMOS ══════════ -->
     <section id="sobre-mi">
       <div class="container">
         <div class="about__grid">
-          <div class="terminal r" data-d="left">
-            <div class="terminal__bar">
-              <span class="terminal__dot"></span>
-              <span class="terminal__dot"></span>
-              <span class="terminal__dot"></span>
-              <span class="terminal__filename">sebastián.js</span>
-            </div>
-            <div class="terminal__body" id="termBody" aria-label="Código de presentación de Juan Sebastián Henao Arenas">
-              <span class="terminal__cursor" id="termCursor"></span>
-            </div>
+          <div class="manifesto r" data-d="left" aria-hidden="true">
+            <p class="manifesto__line"><span>01</span>Creemos en sistemas simples,<br>no en herramientas de más.</p>
+            <p class="manifesto__line"><span>02</span>Creemos en precios claros,<br>dichos antes de empezar.</p>
+            <p class="manifesto__line manifesto__line--accent"><span>03</span>Creemos en negocios que no<br>dependen de estar siempre encendidos.</p>
           </div>
 
           <div class="r" data-d="right">
-            <p class="sh__tag">Sobre mí</p>
+            <p class="sh__tag">Por qué existimos</p>
             <div class="about__text">
-              <h2>Código sólido.<br><span>Resultados reales.</span></h2>
+              <h2>La mayoría de los negocios<br><span>no pierden clientes por calidad.</span></h2>
               <p>
-                Tengo 18 años y estudio Ingeniería de Sistemas en
-                <strong>EAFIT</strong> gracias a la beca <strong>Vélez+ Beca Tech</strong>.
-                Desde hace un par de años construyo sitios web y automatizaciones para
-                negocios locales en Medellín.
+                Los pierden por procesos: mensajes que nadie contesta a tiempo, citas que se
+                pierden entre llamadas, tareas que se repiten cada semana sin necesidad.
               </p>
               <p>
-                Combino código limpio con inteligencia artificial — Claude API, n8n y
-                Twilio — para resolver problemas concretos: más clientes, menos tareas
-                manuales, atención que no se detiene.
+                RENAS existe para cerrar esa brecha — con software simple, bien construido,
+                que tu equipo pueda operar sin depender de quien lo hizo.
               </p>
-              <div class="pills">
-                <span class="pill">18 años</span>
-                <span class="pill">Medellín, Colombia</span>
-                <span class="pill">EAFIT</span>
-                <span class="pill">Vélez+ Beca Tech</span>
-                <span class="pill pill--green">● Disponible</span>
-              </div>
+              <p class="about__credit">Diseñado y construido por Juan Sebastián Henao Arenas, con sede en Medellín.</p>
             </div>
           </div>
         </div>
@@ -207,46 +227,46 @@
       <div class="container">
         <div class="sh r" data-d="up">
           <p class="sh__tag">Servicios</p>
-          <h2 class="sh__title">Lo que resuelvo por tu negocio</h2>
-          <p class="sh__sub">Tres problemas concretos. Tres soluciones que ya están corriendo en producción.</p>
+          <h2 class="sh__title">No vendemos páginas web ni chatbots.</h2>
+          <p class="sh__sub">Vendemos el tiempo y los clientes que hoy se están yendo por procesos manuales.</p>
         </div>
         <div class="services__grid">
           <article class="scard r" data-d="up">
             <p class="scard__num">01</p>
             <div class="scard__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M2 8h20M8 21h8M12 18v3"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M2 8h20M8 21h8M12 18v3"/></svg>
             </div>
-            <h3>Páginas Web que Venden</h3>
-            <p>Sitios rápidos, limpios y optimizados para campañas de Meta Ads. Diseño que transmite confianza desde el primer segundo, con WhatsApp integrado y posicionamiento en Google Maps.</p>
+            <h3>Más clientes, sin pagar más pauta</h3>
+            <p>Un sitio rápido y claro que convierte visitas en mensajes de WhatsApp — construido para campañas de Meta Ads y búsquedas locales.</p>
             <ul class="scard__results">
-              <li>✓ Más consultas desde el primer mes, sin pauta adicional</li>
-              <li>✓ Aparece en búsquedas locales de Medellín y tu zona</li>
+              <li>Más consultas desde el primer mes, sin pauta adicional</li>
+              <li>Apareces en búsquedas locales de tu zona</li>
             </ul>
             <div class="scard__price"><small>Inversión inicial</small>Desde $450.000 COP</div>
           </article>
           <article class="scard r" data-d="up" data-delay="120">
             <p class="scard__num">02</p>
             <div class="scard__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 1 1-8.5-8.5h.5"/><path d="M9 10h.01M12 10h.01M15 10h.01"/><path d="M18 5h3M19.5 3.5v3"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 1 1-8.5-8.5h.5"/><path d="M9 10h.01M12 10h.01M15 10h.01"/><path d="M18 5h3M19.5 3.5v3"/></svg>
             </div>
-            <h3>Chatbots con IA 24/7</h3>
-            <p>Bots conectados a WhatsApp Business vía Twilio, n8n y Claude AI. Responden preguntas, califican prospectos y agendan citas mientras tú duermes — sin intervención manual.</p>
+            <h3>Atención que no se apaga</h3>
+            <p>Chatbots conectados a WhatsApp Business vía Twilio, n8n y Claude AI. Responden, califican y agendan citas mientras tú duermes.</p>
             <ul class="scard__results">
-              <li>✓ Tus preguntas frecuentes, respondidas en segundos</li>
-              <li>✓ El negocio atiende a las 2am sin que nadie esté despierto</li>
+              <li>Tus preguntas frecuentes, respondidas en segundos</li>
+              <li>El negocio atiende a las 2am sin que nadie esté despierto</li>
             </ul>
             <div class="scard__price"><small>Inversión inicial</small>Desde $800.000 COP</div>
           </article>
           <article class="scard r" data-d="up" data-delay="240">
             <p class="scard__num">03</p>
             <div class="scard__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
             </div>
-            <h3>Automatización de Operaciones</h3>
-            <p>Conexión entre tus herramientas actuales, CRMs, WhatsApp y flujos de trabajo que eliminan las tareas repetitivas que frenan a tu equipo todos los días.</p>
+            <h3>Horas que vuelven a tu semana</h3>
+            <p>Conectamos las herramientas que ya usas — CRM, WhatsApp, hojas de cálculo — para eliminar las tareas repetitivas que frenan a tu equipo.</p>
             <ul class="scard__results">
-              <li>✓ Recuperas horas semanales que hoy se van en tareas manuales</li>
-              <li>✓ Conecta las apps que ya usas sin necesidad de código</li>
+              <li>Recuperas horas semanales que hoy se van en tareas manuales</li>
+              <li>Conecta las apps que ya usas, sin escribir código</li>
             </ul>
             <div class="scard__price"><small>Inversión inicial</small>Desde $600.000 COP</div>
           </article>
@@ -260,9 +280,9 @@
     <section id="portafolio">
       <div class="container">
         <div class="sh r" data-d="up">
-          <p class="sh__tag">Casos de Éxito</p>
-          <h2 class="sh__title">Proyectos que resuelven problemas reales</h2>
-          <p class="sh__sub">Tres negocios de Medellín con operaciones transformadas. El problema, la solución y el resultado de cada uno.</p>
+          <p class="sh__tag">Casos de estudio</p>
+          <h2 class="sh__title">Sistemas en producción, no maquetas.</h2>
+          <p class="sh__sub">Negocios reales de Medellín. El problema, la solución y el resultado de cada uno.</p>
         </div>
         <div class="pf-grid">
 
@@ -282,22 +302,22 @@
             </div>
             <div class="pcard__body">
               <div class="pcard__info">
-                <div class="pcard__tags"><span class="ptag ptag--real">✦ Cliente real</span></div>
+                <div class="pcard__tags"><span class="ptag ptag--real">Cliente real</span><span class="ptag">Citas 24/7</span></div>
                 <h3>Luis Badel Sala de Belleza</h3>
                 <div class="pcard__stack"><span>HTML</span><span>CSS</span><span>JS</span><span>Google Maps API</span></div>
                 <a href="https://cheese9117.github.io/luis-badel/" class="btn btn-outline pcard__link" target="_blank" rel="noopener noreferrer">Ver proyecto →</a>
               </div>
               <div class="pcase">
                 <div class="pcase__block">
-                  <span class="pcase__label pcase__label--problem">El Problema</span>
+                  <span class="pcase__label">El problema</span>
                   <p class="pcase__text">Las reservas llegaban solo por llamada directa. Fuera del horario de atención, el salón perdía clientes sin saberlo.</p>
                 </div>
                 <div class="pcase__block">
-                  <span class="pcase__label pcase__label--solution">La Solución</span>
+                  <span class="pcase__label">La solución</span>
                   <p class="pcase__text">Sitio web bilingüe (ES/EN) con galería, reseñas de Google en tiempo real y agendamiento directo por WhatsApp. Desplegado en 3 semanas.</p>
                 </div>
                 <div class="pcase__block">
-                  <span class="pcase__label pcase__label--impact">El Resultado</span>
+                  <span class="pcase__label">El resultado</span>
                   <p class="pcase__text">Citas 24/7 sin que nadie conteste el teléfono. La página posiciona en Google Maps para búsquedas locales y las reseñas se actualizan solas.</p>
                 </div>
               </div>
@@ -320,19 +340,19 @@
             </div>
             <div class="pcard__body">
               <div>
-                <div class="pcard__tags"><span class="ptag">Cotizador Interactivo</span></div>
+                <div class="pcard__tags"><span class="ptag">Cotizador interactivo</span></div>
                 <h3>Lumière Studio</h3>
                 <div class="pcase pcase--compact">
                   <div class="pcase__block">
-                    <span class="pcase__label pcase__label--problem">El Problema</span>
+                    <span class="pcase__label">El problema</span>
                     <p class="pcase__text">Los clientes llegaban a la primera llamada sin saber el precio, generando fricción y consultas sin cerrar.</p>
                   </div>
                   <div class="pcase__block">
-                    <span class="pcase__label pcase__label--solution">La Solución</span>
+                    <span class="pcase__label">La solución</span>
                     <p class="pcase__text">Cotizador interactivo: el cliente configura su servicio, ve el precio en tiempo real y agenda — sin hablar con nadie primero.</p>
                   </div>
                   <div class="pcase__block">
-                    <span class="pcase__label pcase__label--impact">El Resultado</span>
+                    <span class="pcase__label">El resultado</span>
                     <p class="pcase__text">Las consultas que llegan ya vienen precalificadas: saben qué quieren, cuánto cuesta y cómo empezar.</p>
                   </div>
                 </div>
@@ -358,19 +378,19 @@
             </div>
             <div class="pcard__body">
               <div>
-                <div class="pcard__tags"><span class="ptag">Menú + Mapa de Sedes</span></div>
+                <div class="pcard__tags"><span class="ptag">Menú + mapa de sedes</span></div>
                 <h3>Paprimos</h3>
                 <div class="pcase pcase--compact">
                   <div class="pcase__block">
-                    <span class="pcase__label pcase__label--problem">El Problema</span>
+                    <span class="pcase__label">El problema</span>
                     <p class="pcase__text">Cadena de 3 sedes sin presencia digital unificada. Los clientes no sabían qué sede quedaba más cerca ni qué había en el menú.</p>
                   </div>
                   <div class="pcase__block">
-                    <span class="pcase__label pcase__label--solution">La Solución</span>
+                    <span class="pcase__label">La solución</span>
                     <p class="pcase__text">Sitio con menú interactivo completo, integración directa con Rappi y DidiFood, mapa de las 3 sedes y ticker de ofertas.</p>
                   </div>
                   <div class="pcase__block">
-                    <span class="pcase__label pcase__label--impact">El Resultado</span>
+                    <span class="pcase__label">El resultado</span>
                     <p class="pcase__text">Un solo punto de contacto digital para las 3 sedes. Los pedidos llegan a los canales correctos desde el primer clic.</p>
                   </div>
                 </div>
@@ -396,19 +416,19 @@
             </div>
             <div class="pcard__body">
               <div>
-                <div class="pcard__tags"><span class="ptag">Landing + Identidad de marca</span></div>
+                <div class="pcard__tags"><span class="ptag">Landing + identidad de marca</span></div>
                 <h3>Vélez · Odontología</h3>
                 <div class="pcase pcase--compact">
                   <div class="pcase__block">
-                    <span class="pcase__label pcase__label--problem">El Problema</span>
-                    <p class="pcase__text">La gente le huye al odontólogo por miedo y por desconfianza a que le vendan de más. Y las webs del sector son todas iguales: azul frío y sonrisas de stock que no generan ni una pizca de confianza.</p>
+                    <span class="pcase__label">El problema</span>
+                    <p class="pcase__text">La gente le huye al odontólogo por miedo y por desconfianza a que le vendan de más. Las webs del sector son todas iguales: azul frío y sonrisas de stock.</p>
                   </div>
                   <div class="pcase__block">
-                    <span class="pcase__label pcase__label--solution">La Solución</span>
-                    <p class="pcase__text">Identidad de marca propia ("odontología con calma"), copy empático que ataca el miedo real, precios a la vista y una FAQ que resuelve las dudas que frenan la cita. Cada botón abre WhatsApp con el mensaje ya escrito.</p>
+                    <span class="pcase__label">La solución</span>
+                    <p class="pcase__text">Identidad de marca propia, copy empático que ataca el miedo real, precios a la vista y una FAQ que resuelve las dudas que frenan la cita.</p>
                   </div>
                   <div class="pcase__block">
-                    <span class="pcase__label pcase__label--impact">El Resultado</span>
+                    <span class="pcase__label">El resultado</span>
                     <p class="pcase__text">Una landing que baja la ansiedad antes de leer una palabra y convierte la duda en un mensaje de WhatsApp. Optimizada para SEO local de Envigado.</p>
                   </div>
                 </div>
@@ -428,9 +448,9 @@
     <section id="proceso">
       <div class="container">
         <div class="sh r" data-d="up">
-          <p class="sh__tag">Proceso de trabajo</p>
-          <h2 class="sh__title">Cómo trabajamos juntos</h2>
-          <p class="sh__sub">Cuatro pasos sin sorpresas, desde la primera llamada hasta la entrega del sistema.</p>
+          <p class="sh__tag">Proceso</p>
+          <h2 class="sh__title">Un proceso, no una negociación.</h2>
+          <p class="sh__sub">Cuatro pasos sin sorpresas, desde la primera conversación hasta el sistema en producción.</p>
         </div>
         <div class="proc-grid">
           <div class="proc-line" id="procLine" aria-hidden="true">
@@ -438,22 +458,22 @@
           </div>
           <div class="proc-step r" data-d="up">
             <span class="proc-step__n">01</span>
-            <h3>El Diagnóstico <span class="proc-step__badge">Sin costo</span></h3>
+            <h3>El diagnóstico <span class="proc-step__badge">Sin costo</span></h3>
             <p>Videollamada de 20 minutos para entender qué procesos te quitan tiempo o dónde se están perdiendo tus clientes.</p>
           </div>
           <div class="proc-step r" data-d="up" data-delay="120">
             <span class="proc-step__n">02</span>
-            <h3>Propuesta Clara</h3>
+            <h3>Propuesta clara</h3>
             <p>Alcance detallado, tiempo de entrega exacto y precio cerrado. Sin letra chica, sin sorpresas al final.</p>
           </div>
           <div class="proc-step r" data-d="up" data-delay="240">
             <span class="proc-step__n">03</span>
-            <h3>Desarrollo y Pruebas</h3>
+            <h3>Desarrollo y pruebas</h3>
             <p>Construcción modular con avances semanales y pruebas de estrés reales antes de publicar nada.</p>
           </div>
           <div class="proc-step r" data-d="up" data-delay="360">
             <span class="proc-step__n">04</span>
-            <h3>Entrega y Hand-off</h3>
+            <h3>Entrega y hand-off</h3>
             <p>Entrega del sistema con videos cortos explicándote cómo usarlo. Para que no dependas de nadie.</p>
           </div>
         </div>
@@ -466,17 +486,18 @@
         <div class="contact-wrap r" data-d="up">
           <div class="contact-bg" aria-hidden="true"></div>
           <h2 class="contact-title">
-            ¿Tienes un proceso manual<br>
-            <span>que te quita tiempo?</span>
+            Tu próximo cliente no debería depender<br>
+            <span>de que alguien conteste el teléfono.</span>
           </h2>
           <p class="contact-lead">
-            No tienes que saber de código para empezar. Cuéntame tu caso por WhatsApp y te digo cómo lo podemos solucionar.
+            Cuéntanos qué proceso te quita más tiempo. En una conversación de WhatsApp te decimos
+            si tiene sentido automatizarlo — y cómo.
           </p>
           <div class="contact-ctas">
             <div class="wa-pulse-wrap">
-              <a href="https://wa.me/573237226334?text=Hola%20Juan%2C%20vi%20tu%20portafolio%20de%20automatizaci%C3%B3n%20y%20desarrollo%20web%20y%20me%20gustar%C3%ADa%20cotizar%20un%20proyecto%20para%20mi%20negocio." class="btn btn-wa btn-lg magnetic" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/573237226334?text=Hola%20RENAS%2C%20vi%20su%20sitio%20y%20quiero%20hablar%20sobre%20un%20proyecto." class="btn btn-wa btn-lg magnetic" target="_blank" rel="noopener noreferrer">
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.78 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.84 14.07c-.25.7-1.45 1.34-2 1.42-.51.08-1.16.11-1.87-.12-.43-.14-.98-.32-1.69-.62-2.97-1.28-4.91-4.27-5.06-4.47-.15-.2-1.21-1.61-1.21-3.07s.76-2.18 1.03-2.48c.27-.3.59-.37.79-.37.2 0 .4 0 .57.01.18.01.43-.07.67.51.25.6.85 2.08.92 2.23.07.15.12.33.02.53-.1.2-.16.32-.31.5-.15.18-.32.4-.46.53-.15.15-.31.31-.13.6.18.3.8 1.32 1.72 2.14 1.18 1.05 2.18 1.38 2.49 1.53.31.15.49.13.67-.05.18-.18.79-.92 1-1.23.21-.31.42-.26.7-.16.28.1 1.78.84 2.09.99.31.15.51.23.59.36.08.13.08.74-.17 1.44z"/></svg>
-                Escribir por WhatsApp
+                Escríbenos por WhatsApp
               </a>
             </div>
             <div class="contact-links">
@@ -485,13 +506,14 @@
                 github.com/Cheese9117
               </a>
               <button id="copyEmail" type="button" class="contact-link copy-btn" aria-label="Copiar email">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
                 juansebastian9117@gmail.com
               </button>
             </div>
           </div>
           <p class="contact-closing">
-            "No vendo páginas web. Vendo <em>tiempo recuperado</em> y <em>clientes nuevos</em>."
+            "No vendemos páginas web. Vendemos <em>tiempo recuperado</em> y <em>clientes nuevos</em>."
+            <span class="contact-closing__byline">— Juan Sebastián Henao Arenas, fundador de RENAS</span>
           </p>
         </div>
       </div>
@@ -502,35 +524,42 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__g">
-        <div>
+        <div class="footer__col-brand">
           <p class="footer__brand">
             <img src="assets/brand/isotype.svg" class="footer__brand-mark" alt="" width="30" height="15" loading="lazy">
             <span>RENAS</span>
           </p>
-          <p>Juan Sebastián Henao Arenas — desarrollador web freelance en Medellín. Landing pages, chatbots con IA y automatizaciones para negocios locales.</p>
+          <p>Sistemas web para negocios en Medellín: sitios, chatbots y automatizaciones pensados para recuperar tiempo y conseguir clientes.</p>
+        </div>
+        <div>
+          <h4>Servicios</h4>
+          <nav class="footer__links" aria-label="Servicios">
+            <a href="#servicios">Sitios web de conversión</a>
+            <a href="#servicios">Chatbots con IA</a>
+            <a href="#servicios">Automatización de operaciones</a>
+          </nav>
         </div>
         <div>
           <h4>Navegación</h4>
           <nav class="footer__links" aria-label="Pie de página">
-            <a href="#inicio">Inicio</a>
-            <a href="#sobre-mi">Sobre mí</a>
-            <a href="#servicios">Servicios</a>
-            <a href="#portafolio">Portafolio</a>
+            <a href="#sobre-mi">Por qué existimos</a>
+            <a href="#portafolio">Casos de estudio</a>
             <a href="#proceso">Proceso</a>
             <a href="#contacto">Contacto</a>
           </nav>
         </div>
         <div>
-          <h4>Conecta</h4>
-          <nav class="footer__links" aria-label="Redes">
-            <a href="https://github.com/Cheese9117" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <h4>Contacto</h4>
+          <nav class="footer__links" aria-label="Contacto">
             <a href="https://wa.me/573237226334" target="_blank" rel="noopener noreferrer">WhatsApp</a>
             <a href="mailto:juansebastian9117@gmail.com">Email</a>
+            <a href="https://github.com/Cheese9117" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <span class="footer__loc">Medellín, Colombia</span>
           </nav>
         </div>
       </div>
       <div class="footer__bottom">
-        <p>&copy; 2026 Juan Sebastián Henao Arenas. Todos los derechos reservados.</p>
+        <p>&copy; 2026 RENAS. Todos los derechos reservados.</p>
         <span class="footer__status">
           <span class="footer__status-dot" aria-hidden="true"></span>
           Construido en Medellín, Colombia
@@ -539,7 +568,7 @@
     </div>
   </footer>
 
-  <a href="https://wa.me/573237226334?text=Hola%20Juan%2C%20vi%20tu%20portafolio%20de%20automatizaci%C3%B3n%20y%20desarrollo%20web%20y%20me%20gustar%C3%ADa%20cotizar%20un%20proyecto%20para%20mi%20negocio." class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Escribir por WhatsApp">
+  <a href="https://wa.me/573237226334?text=Hola%20RENAS%2C%20vi%20su%20sitio%20y%20quiero%20hablar%20sobre%20un%20proyecto." class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Escribir por WhatsApp">
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.78 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.84 14.07c-.25.7-1.45 1.34-2 1.42-.51.08-1.16.11-1.87-.12-.43-.14-.98-.32-1.69-.62-2.97-1.28-4.91-4.27-5.06-4.47-.15-.2-1.21-1.61-1.21-3.07s.76-2.18 1.03-2.48c.27-.3.59-.37.79-.37.2 0 .4 0 .57.01.18.01.43-.07.67.51.25.6.85 2.08.92 2.23.07.15.12.33.02.53-.1.2-.16.32-.31.5-.15.18-.32.4-.46.53-.15.15-.31.31-.13.6.18.3.8 1.32 1.72 2.14 1.18 1.05 2.18 1.38 2.49 1.53.31.15.49.13.67-.05.18-.18.79-.92 1-1.23.21-.31.42-.26.7-.16.28.1 1.78.84 2.09.99.31.15.51.23.59.36.08.13.08.74-.17 1.44z"/></svg>
   </a>
 

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <defs>
-    <radialGradient id="glow" cx="75%" cy="25%" r="60%">
+    <radialGradient id="glow" cx="75%" cy="20%" r="65%">
       <stop offset="0%" stop-color="#0a3b30"/>
       <stop offset="100%" stop-color="#090909"/>
     </radialGradient>
@@ -13,14 +13,15 @@
   <rect width="1200" height="630" fill="url(#glow)"/>
 
   <!-- Isotipo RENAS -->
-  <path d="M1000,116 C1024,116 1032,60 1058,60 C1073,60 1087,60 1102,60 C1128,60 1136,116 1160,116"
-        fill="none" stroke="url(#brandGradient)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="1080" y="152" font-family="Arial, sans-serif" font-size="24" font-weight="800" fill="#f5f5f5" text-anchor="middle" letter-spacing="2">RENAS</text>
+  <path d="M120,150 C144,150 152,94 178,94 C193,94 207,94 222,94 C248,94 256,150 280,150"
+        fill="none" stroke="url(#brandGradient)" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
 
-  <text x="120" y="106" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#17D79A">Desarrollador web freelance · Medellín, Colombia</text>
-  <text x="120" y="280" font-family="Arial, sans-serif" font-size="76" font-weight="800" fill="#f5f5f5">Juan Sebastián</text>
-  <text x="120" y="370" font-family="Arial, sans-serif" font-size="76" font-weight="800" fill="#17D79A">Henao Arenas</text>
-  <text x="120" y="450" font-family="Arial, sans-serif" font-size="28" fill="#9ca3af">Landing pages · Chatbots de WhatsApp con IA · Automatizaciones</text>
-  <rect x="120" y="500" width="220" height="56" rx="28" fill="#17D79A"/>
-  <text x="230" y="535" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#04140f" text-anchor="middle">Ver portafolio</text>
+  <text x="120" y="250" font-family="Arial, sans-serif" font-size="72" font-weight="800" fill="#f5f5f5">RENAS</text>
+  <text x="120" y="330" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#17D79A">Sistemas que hacen crecer tu negocio</text>
+  <text x="120" y="400" font-family="Arial, sans-serif" font-size="26" fill="#9ca3af">Sitios web · Chatbots con IA · Automatizaciones · Medellín, Colombia</text>
+
+  <rect x="120" y="470" width="220" height="56" rx="28" fill="#17D79A"/>
+  <text x="230" y="505" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#04140f" text-anchor="middle">Ver el sitio</text>
+
+  <text x="120" y="580" font-family="Arial, sans-serif" font-size="18" fill="#5c5c5c">Diseñado y construido por Juan Sebastián Henao Arenas</text>
 </svg>
