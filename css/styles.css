@@ -657,6 +657,7 @@ html { scrollbar-color: var(--surface-hi) var(--bg); scrollbar-width: thin; }
   border:1px solid var(--border-hi); color: var(--muted);
 }
 .ptag--real { color: var(--accent); border-color: var(--accent-dim); background: var(--accent-soft); }
+.ptag--demo { color: var(--faint); border-color: var(--border); background: transparent; }
 .pcard h3 { font-size:1.25rem; margin-bottom:.5rem; letter-spacing:-.01em; }
 .pcard p { color: var(--muted); font-size:.9rem; margin-bottom:1rem; line-height:1.7; }
 .pcard__stack { display:flex; flex-wrap:wrap; gap:.35rem; margin-bottom:1.25rem; }
