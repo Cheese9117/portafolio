@@ -10,7 +10,7 @@
   --border-hi:     rgba(255,255,255,.2);
   --text:          #ebebeb;
   --muted:         #9a9a9a;
-  --faint:         #5c5c5c;
+  --faint:         #7a7a7a;
 
   /* Marca RENAS — verde de énfasis, usado con moderación (~15% del sitio) */
   --accent:        #17D79A;
@@ -83,6 +83,10 @@ ul { list-style: none; }
 img, svg { display: block; max-width: 100%; }
 button { font: inherit; color: inherit; background: none; border: none; cursor: pointer; }
 .container { width: 100%; max-width: 1180px; margin: 0 auto; padding: 0 clamp(1rem,4vw,2rem); }
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
 section { padding: clamp(6rem,11vw,9rem) 0; position: relative; z-index: 1; }
 
 /* Selección de texto e indicador de scroll con color de marca */
@@ -226,7 +230,8 @@ html { scrollbar-color: var(--surface-hi) var(--bg); scrollbar-width: thin; }
 .nav__logo:hover .nav__logo-mark { transform: translateY(-3px); }
 .nav__logo:hover .nav__logo-word { color: var(--accent); }
 .nav__hamburger {
-  display:flex; flex-direction:column; gap:5px; padding:.5rem; z-index:160;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  gap:5px; min-width:44px; min-height:44px; z-index:160;
 }
 .nav__bar {
   width:21px; height:2px; background: var(--text); border-radius:1px;
@@ -249,6 +254,7 @@ html { scrollbar-color: var(--surface-hi) var(--bg); scrollbar-width: thin; }
   font-size:1.35rem; font-weight:700; color: var(--muted);
   transition: color .2s;
   position:relative;
+  padding:.6rem 0; min-height:44px; display:flex; align-items:center;
 }
 .nav__link::after {
   content:''; position:absolute; bottom:-4px; left:0; width:0; height:2px;
@@ -265,7 +271,7 @@ html { scrollbar-color: var(--surface-hi) var(--bg); scrollbar-width: thin; }
     transform:none; opacity:1; background:none; backdrop-filter:none;
     gap:2rem;
   }
-  .nav__link { font-size:.88rem; }
+  .nav__link { font-size:.88rem; padding:0; min-height:0; }
   .nav__cta { margin-top:0; }
 }
 
@@ -958,16 +964,38 @@ html { scrollbar-color: var(--surface-hi) var(--bg); scrollbar-width: thin; }
 .divider__arc { fill:none; stroke: var(--accent); stroke-width:1.5; stroke-linecap:round; opacity:.7; }
 
 /* ═══════════════════════════
+   Testimonial
+═══════════════════════════ */
+.testimonial {
+  max-width:640px; margin:0 auto; text-align:center;
+}
+.testimonial__mark {
+  display:inline-block; width:26px; height:12px; margin-bottom:1.75rem;
+  background: var(--accent);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 52 24'%3E%3Cpath d='M2,18 C10,18 12,7 26,7 C40,7 42,18 50,18' fill='none' stroke='black' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E") center/contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 52 24'%3E%3Cpath d='M2,18 C10,18 12,7 26,7 C40,7 42,18 50,18' fill='none' stroke='black' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E") center/contain no-repeat;
+}
+.testimonial__quote p {
+  font-family: var(--font-display); font-weight: var(--fw-light);
+  font-size: clamp(1.3rem,2.6vw,1.8rem); line-height:1.5;
+  letter-spacing:-.01em; color: var(--text);
+}
+.testimonial__author { display:block; margin-top:1.5rem; }
+.testimonial__name { display:block; font-size:.92rem; font-weight:600; color: var(--text); }
+.testimonial__business { display:block; font-size:.8rem; color: var(--faint); margin-top:.2rem; }
+
+/* ═══════════════════════════
    Footer
 ═══════════════════════════ */
 .footer { border-top:1px solid var(--border); padding:clamp(3rem,7vw,5rem) 0 1.75rem; position:relative; z-index:1; }
+@media(max-width:879px){ .footer { padding-bottom:5.5rem; } }
 .footer__g { display:grid; gap:2.5rem; margin-bottom:3rem; }
 @media(min-width:720px){ .footer__g { grid-template-columns:1.5fr 1fr 1fr 1fr; } }
 .footer__brand { display:flex; align-items:center; gap:.65rem; font-family: var(--font-display); font-size:1.1rem; font-weight:800; margin-bottom:.75rem; }
 .footer__brand-mark { display:block; width:34px; height:auto; flex-shrink:0; }
 .footer__brand span { color: var(--text); }
 .footer p { color: var(--muted); font-size:.88rem; max-width:280px; line-height:1.75; }
-.footer h4 { font-family: var(--font-mono); font-size:.68rem; letter-spacing:.12em; text-transform:uppercase; color: var(--faint); margin-bottom:1rem; }
+.footer h3 { font-family: var(--font-mono); font-size:.68rem; letter-spacing:.12em; text-transform:uppercase; color: var(--faint); margin-bottom:1rem; }
 .footer__links { display:flex; flex-direction:column; gap:.7rem; }
 .footer__links a { color: var(--muted); font-size:.88rem; transition:color .2s; }
 .footer__links a:hover { color: var(--accent); }
@@ -992,6 +1020,7 @@ html { scrollbar-color: var(--surface-hi) var(--bg); scrollbar-width: thin; }
   transition: transform .25s var(--ease-out), box-shadow .25s;
 }
 .wa-float:hover { transform:scale(1.08); box-shadow:0 14px 34px -8px rgba(37,211,102,.65); }
+.wa-float:active { transform:scale(.94); transition-duration:.12s; }
 .wa-float svg { width:28px; height:28px; }
 
 /* ═══════════════════════════
