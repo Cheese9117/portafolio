@@ -12,7 +12,7 @@
   --muted:         #9a9a9a;
   --faint:         #7a7a7a;
 
-  /* Marca RENAS — verde de énfasis, usado con moderación (~15% del sitio) */
+  /* Marca Kelva — verde de énfasis, usado con moderación (~15% del sitio) */
   --accent:        #17D79A;
   --accent-light:  #39E6B0;
   --accent-dark:   #0FA978;
@@ -37,7 +37,7 @@
   --fw-regular:    400;
   --fw-light:      350;
 
-  /* Easing propio de RENAS: deceleracion segura, sin rebote — misma sensacion en toda la web */
+  /* Easing propio de Kelva: deceleracion segura, sin rebote — misma sensacion en toda la web */
   --ease-out:      cubic-bezier(.22,1,.36,1);
   --ease-io:       cubic-bezier(.76,0,.24,1);
   --ease-signature: cubic-bezier(.16,1,.3,1);
@@ -218,7 +218,7 @@ html { scrollbar-color: var(--surface-hi) var(--bg); scrollbar-width: thin; }
 .nav__inner { display:flex; align-items:center; justify-content:space-between; width:100%; }
 .nav__logo { display:flex; align-items:center; gap:.7rem; }
 .nav__logo-mark {
-  display:block; width:38px; height:auto; flex-shrink:0;
+  display:block; width:auto; height:28px; flex-shrink:0;
   transition: transform .4s var(--ease-signature);
 }
 .nav__logo-word {
@@ -338,13 +338,13 @@ html { scrollbar-color: var(--surface-hi) var(--bg); scrollbar-width: thin; }
   padding-top: var(--nav-h);
   overflow:hidden;
 }
-/* Marca de agua del isotipo — si se ocultara el logo, esto sigue siendo RENAS */
+/* Marca de agua del isotipo — si se ocultara el logo, esto sigue siendo Kelva */
 .hero::before {
   content:''; position:absolute; z-index:0;
-  top:6%; right:-10%; width:62%; aspect-ratio:240/96;
+  top:6%; right:-4%; width:38%; aspect-ratio:424.957225/361.043751;
   background: var(--text); opacity:.028;
-  -webkit-mask: url('../assets/brand/isotype-mono.svg') center/contain no-repeat;
-  mask: url('../assets/brand/isotype-mono.svg') center/contain no-repeat;
+  -webkit-mask: url('../assets/brand/kelva-icon-mono.svg') center/contain no-repeat;
+  mask: url('../assets/brand/kelva-icon-mono.svg') center/contain no-repeat;
   pointer-events:none;
 }
 
@@ -421,7 +421,7 @@ html { scrollbar-color: var(--surface-hi) var(--bg); scrollbar-width: thin; }
 @media(min-width:640px){ .principles__grid { grid-template-columns:repeat(2,1fr); } }
 @media(min-width:1024px){ .principles__grid { grid-template-columns:repeat(4,1fr); } }
 
-/* Marca de firma: mismo trazo del isotipo, en miniatura — el ADN visual de RENAS repetido en el sistema */
+/* Marca de firma: mismo trazo del isotipo, en miniatura — el ADN visual de Kelva repetido en el sistema */
 .principle__mark {
   display:block; width:26px; height:12px; margin-bottom:1.15rem;
   background: var(--accent);
@@ -992,7 +992,7 @@ html { scrollbar-color: var(--surface-hi) var(--bg); scrollbar-width: thin; }
 .footer__g { display:grid; gap:2.5rem; margin-bottom:3rem; }
 @media(min-width:720px){ .footer__g { grid-template-columns:1.5fr 1fr 1fr 1fr; } }
 .footer__brand { display:flex; align-items:center; gap:.65rem; font-family: var(--font-display); font-size:1.1rem; font-weight:800; margin-bottom:.75rem; }
-.footer__brand-mark { display:block; width:34px; height:auto; flex-shrink:0; }
+.footer__brand-mark { display:block; width:auto; height:26px; flex-shrink:0; }
 .footer__brand span { color: var(--text); }
 .footer p { color: var(--muted); font-size:.88rem; max-width:280px; line-height:1.75; }
 .footer h3 { font-family: var(--font-mono); font-size:.68rem; letter-spacing:.12em; text-transform:uppercase; color: var(--faint); margin-bottom:1rem; }

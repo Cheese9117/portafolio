@@ -1,7 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Kelva">
-  <rect width="32" height="32" rx="7" fill="#090909"/>
-  <svg x="6" y="7.5" width="20" height="17" viewBox="0 0 424.957225 361.043751" preserveAspectRatio="xMidYMid meet">
-    <g transform="translate(-414.542775,808.700472) scale(0.100000,-0.100000)" fill="#17D79A" stroke="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 424.957225 361.043751" role="img" aria-label="Icono Kelva">
+  <defs>
+    <linearGradient id="kelvaGradient" x1="10%" y1="90%" x2="90%" y2="10%">
+      <stop offset="0%" stop-color="#0FA978"/>
+      <stop offset="55%" stop-color="#2FE0A8"/>
+      <stop offset="100%" stop-color="#7CF5CE"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(-414.542775,808.700472) scale(0.100000,-0.100000)"
+  fill="url(#kelvaGradient)" stroke="none">
 <path d="M6165 8084 c-75 -11 -176 -39 -240 -67 -145 -62 -174 -85 -624 -502
 -114 -105 -386 -356 -606 -559 -464 -427 -490 -453 -524 -526 -22 -47 -26 -69
 -26 -146 1 -82 4 -97 33 -157 36 -73 47 -84 1168 -1122 407 -378 410 -380 544
@@ -15,5 +21,4 @@
 l258 0 -70 63 c-123 110 -955 876 -1350 1242 -203 189 -319 261 -490 305 -77
 20 -257 33 -320 24z"/>
   </g>
-  </svg>
 </svg>
