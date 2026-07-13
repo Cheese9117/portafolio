@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src https://n8n-production-4033c.up.railway.app;">
+  <title>Panel de demos — Kelva</title>
+  <style>
+    :root {
+      --bg: #090909;
+      --panel: #141414;
+      --border: #262626;
+      --text: #f2f2f2;
+      --muted: #9a9a9a;
+      --accent: #25d366;
+      --danger: #e5484d;
+      --radius: 10px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .wrap { width: 100%; max-width: 560px; }
+    h1 { font-size: 1.4rem; margin: 0 0 4px; }
+    p.sub { color: var(--muted); margin: 0 0 28px; font-size: 0.9rem; }
+
+    #gate {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+    }
+    #gate input {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: #0f0f0f;
+      color: var(--text);
+      font-size: 1rem;
+      margin-bottom: 12px;
+    }
+    #gate button, .card button {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 8px;
+      border: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    #gate button { background: var(--accent); color: #052712; }
+
+    #panel { display: none; }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px 18px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .card .info { min-width: 0; }
+    .card .info strong { display: block; font-size: 0.95rem; }
+    .card .info span { color: var(--muted); font-size: 0.78rem; }
+    .card .actions { display: flex; gap: 8px; flex-shrink: 0; }
+    .card .actions button { width: auto; padding: 8px 12px; font-size: 0.82rem; }
+    .btn-on { background: var(--accent); color: #052712; }
+    .btn-off { background: transparent; color: var(--danger); border: 1px solid var(--danger) !important; }
+    .status { margin-top: 20px; font-size: 0.82rem; color: var(--muted); white-space: pre-wrap; min-height: 1.2em; }
+    .group-note { color: var(--muted); font-size: 0.78rem; margin: 20px 0 8px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Panel de demos</h1>
+    <p class="sub">Activa o desactiva los chatbots demo desde aquí.</p>
+
+    <div id="gate">
+      <input type="password" id="pw" placeholder="Contraseña" autocomplete="off">
+      <button id="pwBtn" type="button">Entrar</button>
+    </div>
+
+    <div id="panel">
+      <div class="group-note">Comparten el número de WhatsApp Cloud API — solo uno puede estar activo a la vez</div>
+      <div class="card" data-id="CguKt50KJlQaltQh" data-name="Barber Clasic (v3)">
+        <div class="info"><strong>Barber Clasic (v3)</strong><span>WhatsApp Cloud API</span></div>
+        <div class="actions">
+          <button class="btn-on" data-action="activate">Encender</button>
+          <button class="btn-off" data-action="deactivate">Apagar</button>
+        </div>
+      </div>
+      <div class="card" data-id="2IcTgWTbrdmM1hVL" data-name="Studio Belleza (AI Agent)">
+        <div class="info"><strong>Studio Belleza (AI Agent)</strong><span>WhatsApp Cloud API</span></div>
+        <div class="actions">
+          <button class="btn-on" data-action="activate">Encender</button>
+          <button class="btn-off" data-action="deactivate">Apagar</button>
+        </div>
+      </div>
+
+      <div class="group-note">Usan Evolution API — no compiten por webhook, pueden estar activos en simultáneo</div>
+      <div class="card" data-id="lcWP1J7AWM702Egl" data-name="Studio Belleza (Evolution)">
+        <div class="info"><strong>Studio Belleza (Evolution)</strong><span>Evolution API</span></div>
+        <div class="actions">
+          <button class="btn-on" data-action="activate">Encender</button>
+          <button class="btn-off" data-action="deactivate">Apagar</button>
+        </div>
+      </div>
+      <div class="card" data-id="su2q2FAGIBqYBzbF" data-name="Dental Aurora">
+        <div class="info"><strong>Dental Aurora</strong><span>Evolution API</span></div>
+        <div class="actions">
+          <button class="btn-on" data-action="activate">Encender</button>
+          <button class="btn-off" data-action="deactivate">Apagar</button>
+        </div>
+      </div>
+      <div class="card" data-id="XGVLi0oZDSHqYl1k" data-name="Restaurante">
+        <div class="info"><strong>Restaurante</strong><span>Evolution API</span></div>
+        <div class="actions">
+          <button class="btn-on" data-action="activate">Encender</button>
+          <button class="btn-off" data-action="deactivate">Apagar</button>
+        </div>
+      </div>
+
+      <div class="status" id="status"></div>
+    </div>
+  </div>
+
+  <script defer src="js/panel.js"></script>
+</body>
+</html>

@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /panel-demos/
 
 Sitemap: https://cheese9117.github.io/portafolio/sitemap.xml
