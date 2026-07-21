@@ -1,6 +1,6 @@
 'use strict';
 
-const TOGGLE_ENDPOINT = 'https://n8n-production-4033c.up.railway.app/webhook/panel-demos-toggle';
+const TOGGLE_ENDPOINT = 'https://n8n-production-05f6.up.railway.app/webhook/panel-demos-toggle';
 const SESSION_KEY = 'panelDemosSecret';
 
 const gateSection = document.getElementById('gate');
